@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Blog = () => {
@@ -19,10 +20,12 @@ const Blog = () => {
 			<div className="font-bold mt-10">This is blog page</div>
 			<ul>
 				{blogs?.map(({ id, title, description }) => (
-					<div key={id} className=" border border-gray-600 p-5 my-2">
-						<li>{title}</li>
-						<p>{description}</p>
-					</div>
+					<Link href={`/blog/${id}`} key={id}>
+						<div className=" border border-gray-600 p-5 my-2">
+							<li>{title}</li>
+							<p>{description}</p>
+						</div>
+					</Link>
 				))}
 			</ul>
 		</main>
