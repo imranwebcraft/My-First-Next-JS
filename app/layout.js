@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
 		<html lang="en" className="p-10">
 			<body className={inter.className}>
 				<nan className="my-5">
-					<ul className="flex gap-5">
+					<ul className="flex gap-10">
 						<li>
 							<Link href="/">Home</Link>
 						</li>
@@ -24,6 +24,9 @@ export default function RootLayout({ children }) {
 						</li>
 						<li>
 							<Link href="/blog">Blog</Link>
+						</li>
+						<li>
+							<Link href="/posts">Post</Link>
 						</li>
 					</ul>
 				</nan>
